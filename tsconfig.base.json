@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@otel-nx/graphql": ["packages/graphql/src/index.ts"],
+      "@otel-nx/subschema-providers": [
+        "packages/subschema-providers/src/index.ts"
+      ],
+      "@otel-nx/telemetry": ["packages/telemetry/src/index.ts"],
+      "@otel-nx/tracing": ["packages/tracing/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

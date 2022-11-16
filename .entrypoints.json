@@ -1,0 +1,6 @@
+{
+  "backend-api": {
+    "tags": ["backend"],
+    "port": 3334
+  }
+}
