@@ -54,12 +54,7 @@ export abstract class SubschemaProvider {
   }
 
   getGraphqlHost(): string {
-    if (process.env.ENVIRONMENT === 'local') {
-      return `http://localhost:${this.entrypoint.port ?? 80}`;
-    } else {
-      // Kubernetes service with same name as this entrypoint module
-      return `http://${this.name}`;
-    }
+    return `http://localhost:${this.entrypoint.port ?? 80}`;
   }
 
   /**
