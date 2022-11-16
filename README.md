@@ -1,5 +1,12 @@
 # run dev mode
 
+### set `ENVIRONMENT`
+... so that we use `require()` based bootstrap in dev mode
+
+```
+export ENVIRONMENT=local
+```
+
 ### backend api
 
 ```
@@ -13,6 +20,13 @@ OTEL_SERVICE_NAME=gateway pnpm nx run gateway:serve
 ```
 
 # Production builds
+
+### set `ENVIRONMENT=prod`
+... so that we DON'T use `require()`-based bootstrap.
+
+```
+export ENVIRONMENT=prod
+```
 
 ### build all
 
