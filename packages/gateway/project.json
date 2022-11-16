@@ -13,6 +13,7 @@
         "outputPath": "dist/packages/gateway",
         "main": "packages/gateway/src/main.ts",
         "tsConfig": "packages/gateway/tsconfig.app.json",
+        "generatePackageJson": true,
         "assets": [
           "packages/gateway/src/assets",
           {

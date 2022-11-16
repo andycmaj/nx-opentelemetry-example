@@ -21,10 +21,20 @@ pnpm nx build backend-api
 pnpm nx build gateway
 ```
 
+### rimraf root node_modules
+
+... to ensure we aren't accidentally using dev-time node modules.
+
+```
+rm -rf node_modules
+```
+
 ### run backend-api
 
 ```
 cd dist/packages
+cp ./backend-api/package.json .
+npm install
 OTEL_SERVICE_NAME=backend PORT=3334 node --require ./tracing/src/index.js backend-api/main.js
 ```
 
@@ -32,6 +42,8 @@ OTEL_SERVICE_NAME=backend PORT=3334 node --require ./tracing/src/index.js backen
 
 ```
 cd dist/packages
+cp ./gateway/package.json .
+npm install
 OTEL_SERVICE_NAME=gateway node --require ./tracing/src/index.js gateway/main.js
 ```
 

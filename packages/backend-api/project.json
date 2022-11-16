@@ -13,6 +13,7 @@
         "outputPath": "dist/packages/backend-api",
         "main": "packages/backend-api/src/main.ts",
         "tsConfig": "packages/backend-api/tsconfig.app.json",
+        "generatePackageJson": true,
         "assets": [
           "packages/backend-api/src/assets",
           {
